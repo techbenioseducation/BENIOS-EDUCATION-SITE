@@ -227,6 +227,16 @@ p { margin: 0 0 1rem; }
 .chips.center { justify-content: center; }
 .chip { background: var(--canvas-subtle); border: 1px solid var(--border-muted); border-radius: 999px; padding: 7px 15px; font-size: .9rem; color: var(--fg-muted); }
 
+/* ---------- Map bento (locations) ---------- */
+.maps { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.maps figure { margin: 0; }
+.maps iframe { width: 100%; height: 300px; border: 0; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); display: block; background: var(--canvas-subtle); }
+.maps figcaption { margin-top: 10px; font-weight: 600; text-align: center; }
+@media (max-width: 700px) { .maps { grid-template-columns: 1fr; } }
+
+/* Anchor jumps (bento CTAs) clear the sticky header */
+section[id] { scroll-margin-top: 72px; }
+
 /* ---------- FAQ ---------- */
 .faq { border-bottom: 1px solid var(--border-muted); padding: 18px 0; }
 .faq summary { font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
