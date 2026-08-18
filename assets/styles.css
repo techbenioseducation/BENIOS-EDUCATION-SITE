@@ -227,6 +227,24 @@ p { margin: 0 0 1rem; }
 .chips.center { justify-content: center; }
 .chip { background: var(--canvas-subtle); border: 1px solid var(--border-muted); border-radius: 999px; padding: 7px 15px; font-size: .9rem; color: var(--fg-muted); }
 
+/* ---------- Logo carousel (partners) — all black, auto-scroll ---------- */
+.logo-carousel {
+  overflow: hidden; width: 100%; padding: 10px 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.logo-track { display: flex; align-items: center; gap: 64px; width: max-content; animation: logo-scroll 55s linear infinite; }
+.logo-carousel:hover .logo-track { animation-play-state: paused; }
+.logo-item { flex: none; display: grid; place-items: center; height: 48px; }
+/* real logo images: drop into assets/logos/ — brightness(0) forces solid black */
+.logo-item img { height: 48px; width: auto; object-fit: contain; filter: brightness(0); }
+.logo-item .wordmark { font-weight: 800; font-size: 1.05rem; letter-spacing: -0.01em; color: #000; white-space: nowrap; }
+@keyframes logo-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .logo-carousel { -webkit-mask-image: none; mask-image: none; }
+  .logo-track { animation: none; flex-wrap: wrap; justify-content: center; width: auto; gap: 20px 40px; }
+}
+
 /* ---------- Map bento (locations) ---------- */
 .maps { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .maps figure { margin: 0; }
