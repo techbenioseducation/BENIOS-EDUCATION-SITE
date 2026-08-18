@@ -207,6 +207,8 @@ p { margin: 0 0 1rem; }
 .prose ul { padding-left: 1.2em; }
 .prose li { margin: .4em 0; }
 .callout { background: var(--accent-subtle); border: 1px solid var(--accent-muted); border-radius: var(--radius); padding: 18px 20px; margin: 24px 0; }
+.pull { border-left: 3px solid var(--accent); margin: 24px 0; padding: 4px 0 4px 22px; font-size: 1.15rem; font-weight: 650; line-height: 1.5; color: var(--fg-default); }
+.pull cite { display: block; margin-top: 10px; font-style: normal; font-weight: 500; color: var(--fg-muted); }
 .embed-wrap { border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); background: #fff; }
 
 /* ---------- Bento (audience / Join Us) ---------- */
